@@ -1,0 +1,86 @@
+@font-face {
+    font-family: OstrichSans;
+    src: url(OstrichSans-Heavy.otf);
+  }
+
+
+body {
+    background-color: #C4FFEB;
+    font-family: OstrichSans;
+}
+
+.status{
+    color: #15AD7A;
+    font-size: 80px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapon{
+ flex-direction: row;
+ color: #F06F2B;
+ font-size: 120px;
+}
+
+.el{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.el:hover{
+    color: #AC3B00;
+}
+
+.points{
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.one{
+    display: flex;
+}
+.main{
+    flex-direction:column;
+}
+h1.status{
+    margin-bottom: 0px;
+}
+.result{
+    margin: 0px;
+}
+.winning{
+    color:#0A6E4C;
+    font-size:70px;
+    margin:0px;
+    text-align: center;
+}
+
+.btn{
+    color: white;
+    background-color: #F06F2B;
+    border-radius: .45rem;
+    border: 2px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 2rem;
+}
+.btn:hover{
+    color: white;
+    background-color: #AC3B00;
+    border-radius: .45rem;
+    border: 2px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 2rem; 
+}
+@media (max-width: 800px) {
+    .weapon {
+      flex-direction: column;
+    }
+  }

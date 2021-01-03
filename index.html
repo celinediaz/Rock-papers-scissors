@@ -3,75 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title>Rock Paper Scissors</title>
+  <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-
-  <script>
-    let score = 0; 
-    function computerPlay(){
-     let rand = Math.floor(Math.random() * 3) + 1;
-      switch(rand){
-        case 1: return "rock";
-        case 2: return "paper";
-        case 3: return "scissors";
-      }
-    }
-
-    function playRound(playerSelection, computerSelection) {
-      if(playerSelection.toLowerCase() == computerSelection){
-        return "You tied!";
-       }
-      if(playerSelection.toLowerCase() == "rock"){
-        if(computerSelection == "scissors"){
-          score++;
-          return "You win! Rock beats scissors";
-        }
-        else if(computerSelection == "paper"){
-          score--;
-          return "You lose! Paper beats rock";
-        }
-      }
-      else if(playerSelection.toLowerCase() == "paper"){
-        if(computerSelection == "scissors"){
-          score--;
-          return "You lose! Scissors beat paper";
-        }
-        else if(computerSelection == "rock"){
-          score++;
-          return "You win! Paper beats rock";
-        }
-      }
-      else if(playerSelection.toLowerCase() == "scissors"){
-        if(computerSelection == "rock"){
-          score--;
-          return "You lose! Rock beats scissors";
-        }
-        else if(computerSelection == "paper"){
-          score++;
-          return "You win! Scissors beat paper";
-        }
-      }
-  }
-function game(){
-  let playerSelection;
-  for(let i=0; i<5; i++){
-  playerSelection = prompt("Rock Paper Scissors!");
-  computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection));
-  }
-
-  if(score>0){
-    console.log("You won the tournament!");
-  }
-  else if(score<0){
-    console.log("Oops, it seems you have lost!");
-  }
-  else{
-    console.log("There was a tie!");
-  }
-}
-game();
-
-  </script>
+  <div class="container main">
+    <h1 class="status">YOU VS BOT</h1>
+    <div class="container one">
+    <p class="user status points">0</p>
+    <p class="bot status points">0</p>
+    </div>
+    <p class="winning">
+      Round results
+    </p>
+  </div>
+  <div class="container weapon">
+    <p class="rock el">rock</p>
+    <p class="scissors el">scissors</p>
+    <p class="paper el">paper</p>
+  </div>
+  <div class="container main reset">
+    <p class="status result">First to 5 points wins!</p>
+  </div>
+  
+<script src='script.js'></script>
 </body>
 </html>
